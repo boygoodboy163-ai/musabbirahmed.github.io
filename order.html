@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>IMPRESS DESIGN</h1>
+    <p>Place Your Design Order</p>
+</header>
+
+
+<section>
+
+<div class="card">
+
+<h2>Order Form</h2>
+
+<input type="text" id="name" placeholder="Your Name">
+<br><br>
+
+<input type="email" id="email" placeholder="Your Email">
+<br><br>
+
+<input type="text" id="phone" placeholder="Phone Number">
+<br><br>
+
+<select id="service">
+<option>Logo Design</option>
+<option>Banner Design</option>
+<option>YouTube Thumbnail</option>
+</select>
+
+<br><br>
+
+<textarea id="message" placeholder="Your Requirements"></textarea>
+
+<br><br>
+
+<button onclick="sendOrder()">
+Send Order
+</button>
+
+</div>
+
+
+</section>
+
+
+<script>
+
+function sendOrder(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let service = document.getElementById("service").value;
+let message = document.getElementById("message").value;
+
+
+let text =
+"New Design Order%0A%0A"+
+"Name: "+name+"%0A"+
+"Email: "+email+"%0A"+
+"Phone: "+phone+"%0A"+
+"Service: "+service+"%0A"+
+"Message: "+message;
+
+
+window.open(
+"https://wa.me/8801314337143?text="+text
+);
+
+}
+
+</script>
+
+
+</body>
+</html>
