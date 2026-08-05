@@ -5,9 +5,12 @@
 
 
 body{
+
     margin:0;
-    background:#f5f5f5;
+    min-height:100vh;
+    background:linear-gradient(135deg,#667eea,#764ba2);
     color:#222;
+
 }
 
 
@@ -15,76 +18,68 @@ body{
 /* Header */
 
 header{
+
     text-align:center;
-    padding:60px 20px;
-    background:#111;
+    padding:50px 20px;
     color:white;
+
 }
 
 
 header h1{
+
     font-size:45px;
     margin:0;
-}
 
-
-header h2{
-    font-size:25px;
 }
 
 
 header p{
+
     font-size:18px;
+
 }
 
 
+
 header a{
+
     display:inline-block;
     margin:10px;
     padding:12px 25px;
     background:white;
-    color:#111;
+    color:#333;
     text-decoration:none;
     border-radius:10px;
     font-weight:bold;
-}
 
-
-header a:hover{
-    transform:scale(1.05);
 }
 
 
 
 /* Navigation */
 
+
 nav{
 
     display:flex;
     justify-content:center;
-    gap:20px;
-    padding:15px;
+    gap:15px;
     background:white;
+    padding:15px;
     flex-wrap:wrap;
 
 }
 
 
+
 nav a{
 
     text-decoration:none;
-    color:#111;
+    color:#333;
     text-align:center;
     font-weight:bold;
-    padding:12px 15px;
-    border-radius:12px;
-
-}
-
-
-nav a:hover{
-
-    background:#eeeeee;
+    padding:10px;
 
 }
 
@@ -92,13 +87,14 @@ nav a:hover{
 nav span{
 
     display:block;
-    margin-top:5px;
-    font-size:14px;
 
 }
 
 
+
+
 /* Section */
+
 
 section{
 
@@ -109,88 +105,141 @@ section{
 
 
 
-section h2{
+/* Card */
 
-    font-size:30px;
-
-}
-
-
-
-/* Cards */
 
 .card{
 
-    background:white;
-    display:inline-block;
-    width:280px;
-    margin:15px;
-    padding:25px;
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.1);
+    background:rgba(255,255,255,0.95);
+    width:300px;
+    margin:20px auto;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 
 }
 
 
 
-.card h3{
 
-    font-size:22px;
-
-}
-
-
-
-.card p{
-
-    font-size:16px;
-
-}
-
-
-
-/* Images */
-
-img{
+.card img{
 
     max-width:100%;
-    border-radius:12px;
+    border-radius:15px;
 
 }
 
 
 
-/* Buttons */
-
-a{
-
-    color:#0066ff;
-
-}
 
 
-section a{
+/* Input */
 
-    display:inline-block;
-    margin-top:10px;
-    padding:12px 20px;
+
+input,
+select,
+textarea{
+
+
+    width:90%;
+    padding:12px;
     border-radius:10px;
-    text-decoration:none;
-    background:#111;
-    color:white;
+    border:none;
+    outline:none;
+    margin:5px;
 
 }
+
+
+
+
+
+/* Button */
+
+
+button{
+
+    background:#667eea;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+
+
+button:hover{
+
+    background:#764ba2;
+
+}
+
+
+
+
+/* Gallery */
+
+
+.gallery{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+
+
+.gallery .card{
+
+    margin:10px;
+
+}
+
+
+
+
+/* Status Card */
+
+
+.status-container{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+
+
+.status-card{
+
+    background:white;
+    width:220px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+
+}
+
+
 
 
 
 /* Footer */
 
+
 footer{
 
     text-align:center;
-    padding:25px;
+    padding:20px;
     background:#111;
     color:white;
 
@@ -198,58 +247,34 @@ footer{
 
 
 
-/* Mobile Responsive */
+
+
+/* Mobile */
+
 
 @media(max-width:600px){
 
 
 header h1{
 
-    font-size:32px;
+font-size:32px;
 
 }
 
 
-header h2{
 
-    font-size:20px;
+.card{
 
-}
-
-
-nav{
-
-    gap:8px;
+width:90%;
 
 }
 
 
 nav a{
 
-    width:80px;
-    padding:10px 5px;
+font-size:13px;
 
 }
 
-
-nav span{
-
-    font-size:12px;
-
-}
-
-
-.card{
-
-    width:90%;
-
-}
-
-
-section{
-
-    padding:25px 10px;
-
-}
 
 }
