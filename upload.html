@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Upload Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>IMPRESS DESIGN</h1>
+    <p>Upload New Design</p>
+</header>
+
+
+<section>
+
+<div class="card">
+
+<h2>Add Design</h2>
+
+<input type="text" id="title" placeholder="Design Name">
+<br><br>
+
+<input type="text" id="image" placeholder="Image URL">
+<br><br>
+
+<button onclick="saveDesign()">Upload</button>
+
+</div>
+
+
+<div class="card">
+<h2>Note</h2>
+<p>
+Image URL ব্যবহার করে Design যোগ করা হবে।
+</p>
+</div>
+
+
+</section>
+
+
+<script>
+
+function saveDesign(){
+
+let title = document.getElementById("title").value;
+let image = document.getElementById("image").value;
+
+
+localStorage.setItem("designTitle", title);
+localStorage.setItem("designImage", image);
+
+
+alert("Design Uploaded Successfully!");
+
+window.location.href="portfolio.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
