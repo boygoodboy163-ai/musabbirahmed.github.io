@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Orders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>IMPRESS DESIGN</h1>
+    <p>Customer Order Management</p>
+</header>
+
+
+<section>
+
+<h2>Orders</h2>
+
+<div class="card">
+
+<h3>Order Information</h3>
+
+<p id="orderData">
+No Order Found
+</p>
+
+</div>
+
+
+<br>
+
+<a href="admin.html">
+Back To Admin Panel
+</a>
+
+
+</section>
+
+
+<script>
+
+let order = localStorage.getItem("customerOrder");
+
+
+if(order){
+
+document.getElementById("orderData").innerHTML = order;
+
+}
+
+</script>
+
+
+</body>
+</html>
