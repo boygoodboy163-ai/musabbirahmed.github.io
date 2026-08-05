@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Profile</title>
+</head>
+
+<body>
+
+<h1>User Profile</h1>
+
+<p id="userEmail">Loading...</p>
+
+<button onclick="logout()">Logout</button>
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { 
+getAuth,
+onAuthStateChanged,
+signOut
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyACcRfBEEakwTxevhlwFU5HrYabef4jbNQ",
+  authDomain: "impress-design-6b8a8.firebaseapp.com",
+  projectId: "impress-design-6b8a8",
+  storageBucket: "impress-design-6b8a8.firebasestorage.app",
+  messagingSenderId: "740188914878",
+  appId: "1:740188914878:web:24b1dd365c2f46a5d74aef"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+document.getElementById("userEmail").innerHTML =
+"Logged in as: " + user.email;
+
+}else{
+
+window.location.href="login.html";
+
+}
+
+});
+
+
+window.logout = function(){
+
+signOut(auth).then(()=>{
+
+alert("Logout Successful");
+
+window.location.href="index.html";
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
