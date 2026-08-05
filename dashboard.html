@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>IMPRESS DESIGN</h1>
+    <p>User Dashboard</p>
+</header>
+
+
+<section>
+
+<h2>Welcome User</h2>
+
+<div class="card">
+    <h3>My Account</h3>
+    <p id="email">Loading...</p>
+</div>
+
+
+<div class="card">
+    <h3>Design Services</h3>
+    <p>Logo Design</p>
+    <p>Banner Design</p>
+    <p>Thumbnail Design</p>
+</div>
+
+
+<div class="card">
+    <h3>Company Information</h3>
+    <p>📞 +8801314337143</p>
+    <p>📍 SYLHET, BANGLADESH</p>
+</div>
+
+
+<a href="index.html">Back Home</a>
+
+</section>
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { 
+getAuth,
+onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyACcRfBEEakwTxevhlwFU5HrYabef4jbNQ",
+  authDomain: "impress-design-6b8a8.firebaseapp.com",
+  projectId: "impress-design-6b8a8",
+  storageBucket: "impress-design-6b8a8.firebasestorage.app",
+  messagingSenderId: "740188914878",
+  appId: "1:740188914878:web:24b1dd365c2f46a5d74aef"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+document.getElementById("email").innerHTML =
+"User Email: " + user.email;
+
+}else{
+
+window.location.href="login.html";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
