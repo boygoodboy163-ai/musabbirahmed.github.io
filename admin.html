@@ -20,61 +20,88 @@
 
 
 
+<nav>
+
+<a href="index.html">
+🏠
+<span>Home</span>
+</a>
+
+
+<a href="portfolio.html">
+🎨
+<span>Portfolio</span>
+</a>
+
+
+<a href="upload.html">
+⬆️
+<span>Upload Design</span>
+</a>
+
+
+<a href="orders.html">
+🛒
+<span>Orders</span>
+</a>
+
+
+<a href="profile.html">
+👤
+<span>Profile</span>
+</a>
+
+
+</nav>
+
+
+
 
 <section>
 
 
-<!-- Status Cards -->
 
 <div class="status-container">
 
 
 <div class="status-card">
-
 <h2>👥</h2>
 <h3>Total Users</h3>
 <p>120</p>
-
 </div>
 
 
 
 <div class="status-card">
-
 <h2>🎨</h2>
 <h3>Total Designs</h3>
 <p>45</p>
-
 </div>
 
 
 
 <div class="status-card">
-
 <h2>🛒</h2>
 <h3>Total Orders</h3>
 <p>25</p>
-
 </div>
 
 
 
 <div class="status-card">
-
 <h2>💰</h2>
 <h3>Earnings</h3>
-<p>৳ 5000</p>
-
-</div>
-
-
+<p>৳5000</p>
 </div>
 
 
 
+</div>
 
 
-<!-- Admin Profile -->
+
+
+
 
 <div class="card">
 
@@ -90,7 +117,7 @@ Musabbir Ahmed
 
 
 <p>
-Administrator
+Admin
 </p>
 
 
@@ -103,12 +130,15 @@ Administrator
 
 <div class="card">
 
-<h3>👤 My Account</h3>
+<h3>🎨 Upload Design</h3>
 
-<p>Manage Profile</p>
+<p>
+Add New Design To Portfolio
+</p>
 
-<a href="profile.html">
-Open Account
+
+<a href="upload.html">
+Open Upload
 </a>
 
 </div>
@@ -122,7 +152,10 @@ Open Account
 
 <h3>🛒 My Orders</h3>
 
-<p>Customer Orders</p>
+<p>
+Manage Customer Orders
+</p>
+
 
 <a href="orders.html">
 View Orders
@@ -137,9 +170,31 @@ View Orders
 
 <div class="card">
 
+<h3>👤 My Account</h3>
+
+<p>
+Profile Settings
+</p>
+
+
+<a href="profile.html">
+Open Profile
+</a>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
 <h3>🎫 My Codes</h3>
 
-<p>Promo & Discount Codes</p>
+<p>
+Promo Code Management
+</p>
 
 </div>
 
@@ -152,7 +207,9 @@ View Orders
 
 <h3>💳 My Transaction</h3>
 
-<p>Payment History</p>
+<p>
+Payment History
+</p>
 
 </div>
 
@@ -165,7 +222,9 @@ View Orders
 
 <h3>💰 Add Money</h3>
 
-<p>Balance Management</p>
+<p>
+Balance Management
+</p>
 
 </div>
 
@@ -204,7 +263,6 @@ Need Help?
 
 
 
-
 <div class="card">
 
 <h3>🚪 Logout</h3>
@@ -212,7 +270,6 @@ Need Help?
 <button onclick="logout()">
 Logout
 </button>
-
 
 </div>
 
@@ -223,35 +280,15 @@ Logout
 
 
 
+<script>
 
+function logout(){
 
-<script type="module">
-
-
-import { getAuth, signOut }
-from
-"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-
-
-const auth = getAuth();
-
-
-
-window.logout=function(){
-
-
-signOut(auth).then(()=>{
-
+alert("Logout Successful");
 
 window.location.href="login.html";
 
-
-});
-
-
 }
-
 
 </script>
 
