@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>IMPRESS DESIGN - Admin</title>
+<title>IMPRESS DESIGN - Admin Dashboard</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,21 +20,83 @@
 
 
 
+
 <section>
 
 
-<div class="card">
+<!-- Status Cards -->
 
-<img src="images/profile.jpg" 
-width="120"
-style="border-radius:50%;">
+<div class="status-container">
 
-<h2>Musabbir Ahmed</h2>
 
-<p>Administrator</p>
+<div class="status-card">
+
+<h2>👥</h2>
+<h3>Total Users</h3>
+<p>120</p>
+
+</div>
+
+
+
+<div class="status-card">
+
+<h2>🎨</h2>
+<h3>Total Designs</h3>
+<p>45</p>
+
+</div>
+
+
+
+<div class="status-card">
+
+<h2>🛒</h2>
+<h3>Total Orders</h3>
+<p>25</p>
+
+</div>
+
+
+
+<div class="status-card">
+
+<h2>💰</h2>
+<h3>Earnings</h3>
+<p>৳ 5000</p>
+
+</div>
 
 
 </div>
+
+
+
+
+
+<!-- Admin Profile -->
+
+<div class="card">
+
+
+<img src="images/profile.jpg"
+width="120"
+style="border-radius:50%;">
+
+
+<h2>
+Musabbir Ahmed
+</h2>
+
+
+<p>
+Administrator
+</p>
+
+
+</div>
+
+
 
 
 
@@ -54,11 +116,13 @@ Open Account
 
 
 
+
+
 <div class="card">
 
 <h3>🛒 My Orders</h3>
 
-<p>Check Customer Orders</p>
+<p>Customer Orders</p>
 
 <a href="orders.html">
 View Orders
@@ -69,13 +133,17 @@ View Orders
 
 
 
+
+
 <div class="card">
 
 <h3>🎫 My Codes</h3>
 
-<p>Discount & Promo Codes</p>
+<p>Promo & Discount Codes</p>
 
 </div>
+
+
 
 
 
@@ -91,6 +159,8 @@ View Orders
 
 
 
+
+
 <div class="card">
 
 <h3>💰 Add Money</h3>
@@ -102,13 +172,19 @@ View Orders
 
 
 
+
+
 <div class="card">
 
 <h3>📞 Contact Us</h3>
 
-<p>+8801314337143</p>
+<p>
++8801314337143
+</p>
 
 </div>
+
+
 
 
 
@@ -117,9 +193,14 @@ View Orders
 
 <h3>🆘 Support</h3>
 
-<p>Need Help?</p>
+<p>
+Need Help?
+</p>
 
 </div>
+
+
+
 
 
 
@@ -132,6 +213,7 @@ View Orders
 Logout
 </button>
 
+
 </div>
 
 
@@ -140,24 +222,36 @@ Logout
 
 
 
+
+
+
 <script type="module">
 
-import { getAuth, signOut } from 
+
+import { getAuth, signOut }
+from
 "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
-const auth=getAuth();
+
+const auth = getAuth();
+
 
 
 window.logout=function(){
 
+
 signOut(auth).then(()=>{
+
 
 window.location.href="login.html";
 
+
 });
 
+
 }
+
 
 </script>
 
