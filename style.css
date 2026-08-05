@@ -3,6 +3,7 @@
     font-family:Arial, sans-serif;
 }
 
+
 body{
     margin:0;
     background:#f5f5f5;
@@ -10,9 +11,12 @@ body{
 }
 
 
+
+/* Header */
+
 header{
     text-align:center;
-    padding:50px 20px;
+    padding:60px 20px;
     background:#111;
     color:white;
 }
@@ -20,7 +24,17 @@ header{
 
 header h1{
     font-size:45px;
-    margin-bottom:10px;
+    margin:0;
+}
+
+
+header h2{
+    font-size:25px;
+}
+
+
+header p{
+    font-size:18px;
 }
 
 
@@ -31,63 +45,155 @@ header a{
     background:white;
     color:#111;
     text-decoration:none;
-    border-radius:8px;
-}
-
-
-
-nav{
-    text-align:center;
-    padding:15px;
-    background:white;
-}
-
-
-nav a{
-    margin:10px;
-    text-decoration:none;
-    color:#111;
+    border-radius:10px;
     font-weight:bold;
 }
 
 
-
-section{
-    padding:40px 20px;
-    text-align:center;
+header a:hover{
+    transform:scale(1.05);
 }
 
 
 
+/* Navigation */
+
+nav{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:white;
+    flex-wrap:wrap;
+
+}
+
+
+nav a{
+
+    text-decoration:none;
+    color:#111;
+    text-align:center;
+    font-weight:bold;
+    padding:12px 15px;
+    border-radius:12px;
+
+}
+
+
+nav a:hover{
+
+    background:#eeeeee;
+
+}
+
+
+nav span{
+
+    display:block;
+    margin-top:5px;
+    font-size:14px;
+
+}
+
+
+/* Section */
+
+section{
+
+    padding:40px 20px;
+    text-align:center;
+
+}
+
+
+
+section h2{
+
+    font-size:30px;
+
+}
+
+
+
+/* Cards */
+
 .card{
+
     background:white;
     display:inline-block;
     width:280px;
     margin:15px;
     padding:25px;
     border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.1);
+
 }
 
 
-.card img{
+
+.card h3{
+
+    font-size:22px;
+
+}
+
+
+
+.card p{
+
+    font-size:16px;
+
+}
+
+
+
+/* Images */
+
+img{
+
     max-width:100%;
-    border-radius:10px;
+    border-radius:12px;
+
 }
 
 
+
+/* Buttons */
 
 a{
+
     color:#0066ff;
+
+}
+
+
+section a{
+
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 20px;
+    border-radius:10px;
+    text-decoration:none;
+    background:#111;
+    color:white;
+
 }
 
 
 
+/* Footer */
+
 footer{
+
     text-align:center;
-    padding:20px;
+    padding:25px;
     background:#111;
     color:white;
+
 }
 
 
@@ -96,24 +202,54 @@ footer{
 
 @media(max-width:600px){
 
+
 header h1{
+
     font-size:32px;
+
+}
+
+
+header h2{
+
+    font-size:20px;
+
+}
+
+
+nav{
+
+    gap:8px;
+
 }
 
 
 nav a{
-    display:block;
-    margin:15px;
+
+    width:80px;
+    padding:10px 5px;
+
+}
+
+
+nav span{
+
+    font-size:12px;
+
 }
 
 
 .card{
+
     width:90%;
+
 }
 
 
 section{
+
     padding:25px 10px;
+
 }
 
 }
