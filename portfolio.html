@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMPRESS DESIGN - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>IMPRESS DESIGN</h1>
+    <p>Our Design Portfolio</p>
+</header>
+
+
+<section>
+
+<h2>Latest Designs</h2>
+
+<div class="card">
+
+<h3 id="designTitle">
+No Design Added
+</h3>
+
+<img id="designImage" width="300">
+
+</div>
+
+
+<br>
+
+<a href="upload.html">
+Add New Design
+</a>
+
+
+</section>
+
+
+<script>
+
+let title = localStorage.getItem("designTitle");
+let image = localStorage.getItem("designImage");
+
+
+if(title){
+document.getElementById("designTitle").innerHTML = title;
+}
+
+
+if(image){
+document.getElementById("designImage").src = image;
+}
+
+</script>
+
+
+</body>
+</html>
