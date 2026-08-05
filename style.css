@@ -1,1 +1,17 @@
-CSS
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.box {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 22px;
+}
