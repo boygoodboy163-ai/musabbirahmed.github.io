@@ -1,48 +1,145 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>IMPRESS DESIGN - Order</title>
-    <link rel="stylesheet" href="style.css">
+
+<title>IMPRESS DESIGN - Order</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>IMPRESS DESIGN</h1>
-    <p>Place Your Design Order</p>
+
+<h1>IMPRESS DESIGN</h1>
+
+<p>
+Place Your Design Order
+</p>
+
 </header>
+
+
 
 
 <section>
 
+
 <div class="card">
+
 
 <h2>Order Form</h2>
 
+
+
 <input type="text" id="name" placeholder="Your Name">
+
+
 <br><br>
+
+
 
 <input type="email" id="email" placeholder="Your Email">
+
+
 <br><br>
+
+
 
 <input type="text" id="phone" placeholder="Phone Number">
+
+
 <br><br>
+
+
+
 
 <select id="service">
-<option>Logo Design</option>
-<option>Banner Design</option>
-<option>YouTube Thumbnail</option>
+
+
+<option>
+Custom Frame Design - ৳300
+</option>
+
+
+<option>
+Birth Frame Design - ৳500
+</option>
+
+
+<option>
+Banner Design - ৳400
+</option>
+
+
+<option>
+YouTube Thumbnail - ৳300
+</option>
+
+
+<option>
+Logo Design - ৳800
+</option>
+
+
 </select>
 
-<br><br>
 
-<textarea id="message" placeholder="Your Requirements"></textarea>
 
 <br><br>
+
+
+
+
+<select id="payment">
+
+
+<option>
+bKash
+</option>
+
+
+<option>
+Nagad
+</option>
+
+
+<option>
+Cash Payment
+</option>
+
+
+</select>
+
+
+
+
+<br><br>
+
+
+
+<textarea 
+id="message"
+placeholder="Your Design Requirement">
+</textarea>
+
+
+
+<br><br>
+
+
 
 <button onclick="sendOrder()">
+
 Send Order
+
 </button>
+
+
 
 </div>
 
@@ -50,34 +147,75 @@ Send Order
 </section>
 
 
+
+
+
+
 <script>
+
 
 function sendOrder(){
 
-let name = document.getElementById("name").value;
-let email = document.getElementById("email").value;
-let phone = document.getElementById("phone").value;
-let service = document.getElementById("service").value;
-let message = document.getElementById("message").value;
+
+let name =
+document.getElementById("name").value;
+
+
+let email =
+document.getElementById("email").value;
+
+
+let phone =
+document.getElementById("phone").value;
+
+
+let service =
+document.getElementById("service").value;
+
+
+let payment =
+document.getElementById("payment").value;
+
+
+let message =
+document.getElementById("message").value;
+
 
 
 let text =
-"New Design Order%0A%0A"+
+
+"IMPRESS DESIGN Order%0A%0A"+
+
 "Name: "+name+"%0A"+
+
 "Email: "+email+"%0A"+
+
 "Phone: "+phone+"%0A"+
-"Service: "+service+"%0A"+
-"Message: "+message;
+
+"Design: "+service+"%0A"+
+
+"Payment: "+payment+"%0A"+
+
+"Requirement: "+message;
+
 
 
 window.open(
+
 "https://wa.me/8801314337143?text="+text
+
 );
 
+
+
 }
+
+
 
 </script>
 
 
+
 </body>
+
 </html>
