@@ -17,9 +17,36 @@
 
 <h1>IMPRESS DESIGN</h1>
 
-<p>Upload New Design</p>
+<p>
+Upload New Design
+</p>
 
 </header>
+
+
+
+
+<nav>
+
+<a href="index.html">
+🏠
+<span>Home</span>
+</a>
+
+
+<a href="portfolio.html">
+🎨
+<span>Portfolio</span>
+</a>
+
+
+<a href="admin.html">
+⚙️
+<span>Admin</span>
+</a>
+
+
+</nav>
 
 
 
@@ -27,35 +54,75 @@
 <section>
 
 
-<h2>Add Design</h2>
-
-
-
 <div class="card">
 
 
+<h2>🎨 Add New Design</h2>
+
+
+
 <label>
-Design Category
+Design Name
 </label>
+
+<br>
+
+<input 
+type="text"
+id="designName"
+placeholder="Example: Custom Frame Design"
+>
+
 
 <br><br>
 
 
+
+<label>
+Category
+</label>
+
+<br>
+
+
 <select id="category">
+
 
 <option>
 Custom Frame Design
 </option>
 
+
 <option>
 Birth Frame Design
 </option>
+
 
 <option>
 Banner Design
 </option>
 
+
 </select>
+
+
+
+<br><br>
+
+
+
+<label>
+Price (BDT)
+</label>
+
+<br>
+
+
+<input 
+type="number"
+id="price"
+placeholder="Example: 500"
+>
 
 
 
@@ -67,11 +134,12 @@ Banner Design
 Select JPG Image
 </label>
 
+
 <br><br>
 
 
 <input 
-type="file" 
+type="file"
 id="imageInput"
 accept=".jpg,.jpeg"
 >
@@ -85,7 +153,7 @@ accept=".jpg,.jpeg"
 <img 
 id="preview"
 width="300"
-style="display:none;border-radius:10px;"
+style="display:none;border-radius:15px;"
 >
 
 
@@ -106,6 +174,7 @@ Preview Design
 
 
 </section>
+
 
 
 
@@ -142,21 +211,20 @@ return;
 
 
 
-let reader = new FileReader();
+let reader=new FileReader();
 
 
 
 reader.onload=function(e){
 
 
-let preview =
-document.getElementById("preview");
+let img=document.getElementById("preview");
 
 
-preview.src=e.target.result;
+img.src=e.target.result;
 
 
-preview.style.display="block";
+img.style.display="block";
 
 
 }
