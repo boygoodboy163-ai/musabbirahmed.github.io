@@ -1,66 +1,180 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>IMPRESS DESIGN - Upload Design</title>
-    <link rel="stylesheet" href="style.css">
+
+<title>IMPRESS DESIGN - Upload Design</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>IMPRESS DESIGN</h1>
-    <p>Upload New Design</p>
+
+<h1>IMPRESS DESIGN</h1>
+
+<p>Upload New Design</p>
+
 </header>
+
+
 
 
 <section>
 
-<div class="card">
 
 <h2>Add Design</h2>
 
-<input type="text" id="title" placeholder="Design Name">
-<br><br>
-
-<input type="text" id="image" placeholder="Image URL">
-<br><br>
-
-<button onclick="saveDesign()">Upload</button>
-
-</div>
 
 
 <div class="card">
-<h2>Note</h2>
-<p>
-Image URL ব্যবহার করে Design যোগ করা হবে।
-</p>
+
+
+<label>
+Design Category
+</label>
+
+<br><br>
+
+
+<select id="category">
+
+<option>
+Custom Frame Design
+</option>
+
+<option>
+Birth Frame Design
+</option>
+
+<option>
+Banner Design
+</option>
+
+</select>
+
+
+
+<br><br>
+
+
+
+<label>
+Select JPG Image
+</label>
+
+<br><br>
+
+
+<input 
+type="file" 
+id="imageInput"
+accept=".jpg,.jpeg"
+>
+
+
+
+<br><br>
+
+
+
+<img 
+id="preview"
+width="300"
+style="display:none;border-radius:10px;"
+>
+
+
+
+<br><br>
+
+
+
+<button onclick="previewImage()">
+
+Preview Design
+
+</button>
+
+
+
 </div>
 
 
 </section>
 
 
+
+
+
 <script>
 
-function saveDesign(){
 
-let title = document.getElementById("title").value;
-let image = document.getElementById("image").value;
+function previewImage(){
 
 
-localStorage.setItem("designTitle", title);
-localStorage.setItem("designImage", image);
+let file =
+document.getElementById("imageInput").files[0];
 
 
-alert("Design Uploaded Successfully!");
 
-window.location.href="portfolio.html";
+if(!file){
+
+alert("Please select JPG image");
+
+return;
 
 }
+
+
+
+if(file.type !== "image/jpeg"){
+
+alert("Only JPG image allowed");
+
+return;
+
+}
+
+
+
+let reader = new FileReader();
+
+
+
+reader.onload=function(e){
+
+
+let preview =
+document.getElementById("preview");
+
+
+preview.src=e.target.result;
+
+
+preview.style.display="block";
+
+
+}
+
+
+
+reader.readAsDataURL(file);
+
+
+
+}
+
+
 
 </script>
 
 
+
 </body>
+
 </html>
